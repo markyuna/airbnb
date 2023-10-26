@@ -1,24 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
 
-export default function App() {
+import 'react-native-gesture-handler';
+import React from 'react';
+import { StatusBar, } from 'react-native';
+
+import Router from './src/navigation/Router';
+
+// import HomeScreen from './src/screens/Home';
+
+import { withAuthenticator } from '@aws-amplify/ui-react';
+
+const App: () => React$Node = () => {
+  console.log(App);
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>H O L A</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <Router />
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  text: {
-    color: '#4f1',
-    fontSize: 80
-  }
-});
+export default withAuthenticator(App);
+
