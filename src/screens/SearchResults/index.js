@@ -23,6 +23,18 @@ const SearchResultsScreen = (props) => {
             filter: {
               maxGuests: {
                 ge: guests
+              },
+              latitude: {
+                between: [
+                  viewport.southwest.lat,
+                  viewport.northeast.lat,
+                ],
+              },
+              longitude: {
+                between: [
+                  viewport.southwest.lng,
+                  viewport.northeast.lng,
+                ],
               }
             }
           })
