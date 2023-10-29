@@ -7,9 +7,9 @@ import { listPosts } from "../../graphql/queries";
 
 const SearchResultsScreen = (props) => {
 
-  const { guests, viewport } = props;
+  const { guests, viewport, posts } = props;
 
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
 
   console.log("viewport");
   console.log(viewport);

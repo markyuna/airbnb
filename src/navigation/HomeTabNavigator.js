@@ -16,8 +16,8 @@ const HomeTabNavigator = (props) => {
       }}>
       <Tab.Screen
         name="Explore"
-        // component={ExploreNavigator}
-        component={PostScreen}
+        component={ExploreNavigator}
+        // component={PostScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome name="search" size={25} color={color} /> // Usando FontAwesome en lugar de FontAwesome5

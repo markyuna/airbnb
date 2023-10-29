@@ -9,7 +9,7 @@ import { listPosts } from "../graphql/queries";
 const Tab = createMaterialTopTabNavigator();
 
 const SearchResultsTabNavigator = (props) => {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
   const route = useRoute();
   const { guests, viewport } = route.params;
 
