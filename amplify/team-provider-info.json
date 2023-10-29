@@ -26,7 +26,7 @@
       "function": {
         "AdminQueries5fa2f7e2": {
           "deploymentBucketName": "amplify-airbnb-dev-183332-deployment",
-          "s3Key": "amplify-builds/AdminQueries5fa2f7e2-6c553455697371465747-build.zip"
+          "s3Key": "amplify-builds/AdminQueries5fa2f7e2-66382b305641464b674d-build.zip"
         }
       },
       "hosting": {
