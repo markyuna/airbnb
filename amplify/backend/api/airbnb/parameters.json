@@ -2,5 +2,5 @@
   "AppSyncApiName": "airbnb",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-10-26T18:59:26.736Z"
+  "AuthModeLastUpdated": "2023-10-29T14:57:24.059Z"
 }

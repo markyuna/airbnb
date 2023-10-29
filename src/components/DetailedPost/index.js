@@ -28,8 +28,8 @@ const Post = (props) => {
         {/*  Old price & new price */}
         <Text style={styles.prices}>
           <Text style={styles.oldPrice}>${post.oldPrice}</Text>
-          <Text style={styles.price}>  ${post.newPrice} </Text>
-          / night
+          <Text style={styles.price}>  ${post.newPrice} / night</Text>
+          
         </Text>
 
         {/*  Total price */}

@@ -23,7 +23,7 @@
     }
   },
   "auth": {
-    "airbnb839caab1": {
+    "airbnb53001366": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -33,7 +33,7 @@
         ],
         "passwordProtectionSettings": {
           "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 6
+          "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
           "EMAIL"
@@ -48,6 +48,13 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "storage": {
+    "s3airbnbstorage9b5193aa": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }

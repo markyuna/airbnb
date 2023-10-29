@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import {  createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import React, { useState, useEffect } from "react";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import SearchResults from '../screens/SearchResults';
 import SearchResultsMap from '../screens/SearchResultsMap';
 import { useRoute } from "@react-navigation/native";
@@ -9,16 +9,13 @@ import { listPosts } from "../graphql/queries";
 const Tab = createMaterialTopTabNavigator();
 
 const SearchResultsTabNavigator = (props) => {
-
   const [posts, setPosts] = useState([]);
-console.log(route);
   const route = useRoute();
-  const { guests, viewport }  = route.params;
+  const { guests, viewport } = route.params;
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-
         const postsResult = await API.graphql(
           graphqlOperation(listPosts, {
             filter: {
@@ -41,19 +38,19 @@ console.log(route);
               }
             }
           })
-        )
+        );
 
         setPosts(postsResult.data.listPosts.items);
-      } catch (e) {
-        console.log(e);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
       }
-    }
+    };
 
     fetchPosts();
-  }, [])
+  }, [guests, viewport]);
 
   return (
-    <Tab.Navigator 
+    <Tab.Navigator
       screenOptions={{
         activeTintColor: '#f15454',
         indicatorStyle: {
@@ -61,16 +58,8 @@ console.log(route);
         }
       }}
     >
-      <Tab.Screen name={"list"}>
-        {() => (
-          <SearchResults posts={posts} viewport={viewport} />
-        )}
-      </Tab.Screen>
-      <Tab.Screen name={"map"}>
-        {() => (
-          <SearchResultsMap posts={posts} viewport={viewport} />
-        )}
-      </Tab.Screen>
+      <Tab.Screen name={"list"} component={SearchResults} />
+      <Tab.Screen name={"map"} component={SearchResultsMap} />
     </Tab.Navigator>
   );
 };

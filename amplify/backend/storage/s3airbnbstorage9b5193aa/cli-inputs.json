@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3airbnbstorage9b5193aa",
+  "bucketName": "airbnb-storage-9b5193aa",
+  "policyUUID": "0a07f7a3",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

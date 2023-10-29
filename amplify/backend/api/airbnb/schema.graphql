@@ -7,7 +7,7 @@ type Post @model @auth(rules: [{allow: public}]) {
   bed: Int!
   bedroom: Int!
   maxGuests: Int!
-  oldPrice: Float
+  oldPrice: Float!
   newPrice: Float!
   latitude: Float!
   longitude: Float!
