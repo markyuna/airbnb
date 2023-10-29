@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@types/cookie": "^0.5.3",
     "@types/react-native-vector-icons": "^6.4.16",
     "babel-plugin-inline-dotenv": "^1.7.0",
     "react-native-flipper": "^0.212.0"
